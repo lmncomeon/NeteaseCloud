@@ -124,7 +124,6 @@
 		BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */; };
 		BEABCCA11EE6AB2A00E8142A /* MNFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA01EE6AB2A00E8142A /* MNFinderViewController.m */; };
 		BEABCCA41EE6AB3300E8142A /* MNAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA31EE6AB3300E8142A /* MNAboutMeViewController.m */; };
-		BEB33BB31EE8E7E000CBBF54 /* MNTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB33BB21EE8E7E000CBBF54 /* MNTestViewController.m */; };
 		BEB33BBF1EE9201800CBBF54 /* MNControllerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB33BBE1EE9201800CBBF54 /* MNControllerModel.m */; };
 		BED8574A1EE4F5B300F1F20F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BED857491EE4F5B300F1F20F /* main.m */; };
 		BED857531EE4F5B300F1F20F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED857511EE4F5B300F1F20F /* Main.storyboard */; };
@@ -353,8 +352,6 @@
 		BEABCCA01EE6AB2A00E8142A /* MNFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNFinderViewController.m; sourceTree = "<group>"; };
 		BEABCCA21EE6AB3300E8142A /* MNAboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNAboutMeViewController.h; sourceTree = "<group>"; };
 		BEABCCA31EE6AB3300E8142A /* MNAboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNAboutMeViewController.m; sourceTree = "<group>"; };
-		BEB33BB11EE8E7E000CBBF54 /* MNTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTestViewController.h; sourceTree = "<group>"; };
-		BEB33BB21EE8E7E000CBBF54 /* MNTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTestViewController.m; sourceTree = "<group>"; };
 		BEB33BBD1EE9201800CBBF54 /* MNControllerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNControllerModel.h; sourceTree = "<group>"; };
 		BEB33BBE1EE9201800CBBF54 /* MNControllerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNControllerModel.m; sourceTree = "<group>"; };
 		BED857451EE4F5B300F1F20F /* MNRichDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNRichDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -457,8 +454,6 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
-				BEB33BB11EE8E7E000CBBF54 /* MNTestViewController.h */,
-				BEB33BB21EE8E7E000CBBF54 /* MNTestViewController.m */,
 				BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */,
 			);
 			path = Controllers;
@@ -997,7 +992,6 @@
 				BE361C841EE4FA8B005C8F36 /* customHUD.m in Sources */,
 				BE361D4F1EE50211005C8F36 /* UIProgressView+AFNetworking.m in Sources */,
 				BE361CB81EE4FA8B005C8F36 /* UIImage+GIF.m in Sources */,
-				BEB33BB31EE8E7E000CBBF54 /* MNTestViewController.m in Sources */,
 				BE361D601EE503CE005C8F36 /* Base64.m in Sources */,
 				BE361CB11EE4FA8B005C8F36 /* SDWebImageCompat.m in Sources */,
 				BEABCCA11EE6AB2A00E8142A /* MNFinderViewController.m in Sources */,

@@ -25,6 +25,7 @@ static NSString *const cellID = @"UITableViewCellID";
         _mainTableView.dataSource = self;
         _mainTableView.delegate   = self;
         _mainTableView.rowHeight  = adaptY(60);
+        _mainTableView.bounces    = false;
         [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
         [self.view addSubview:_mainTableView];
     }
