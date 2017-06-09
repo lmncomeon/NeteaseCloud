@@ -10,8 +10,6 @@
 
 @interface MNMusicViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UITableView *mainTableView;
-
 @end
 
 static NSString *const cellID = @"UITableViewCellID";
@@ -20,12 +18,11 @@ static NSString *const cellID = @"UITableViewCellID";
 
 - (UITableView *)mainTableView {
     if (!_mainTableView) {
-        _mainTableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
+        _mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _mainTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _mainTableView.dataSource = self;
         _mainTableView.delegate   = self;
         _mainTableView.rowHeight  = adaptY(60);
-        _mainTableView.bounces    = false;
         [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
         [self.view addSubview:_mainTableView];
     }
@@ -34,8 +31,8 @@ static NSString *const cellID = @"UITableViewCellID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    [self mainTableView];
+    
+    self.mainTableView.height = kScreenHeight-adaptY(30)-64;
 }
 
 - (void)setListArray:(NSArray *)listArray {
@@ -46,7 +43,7 @@ static NSString *const cellID = @"UITableViewCellID";
 
 #pragma mark - tableview datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 8;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -86,7 +83,6 @@ static NSString *const cellID = @"UITableViewCellID";
     
     return header;
 }
-
 
 #pragma mark - dealloc
 - (void)dealloc {

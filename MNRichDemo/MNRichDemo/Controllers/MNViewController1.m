@@ -80,6 +80,7 @@
         _container = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.navigationView.frame), kScreenWidth, kScreenHeight-64+adaptY(136))];
         _container.contentSize = CGSizeMake(0, _container.height + adaptY(136));
         _container.delegate = self;
+        _container.showsVerticalScrollIndicator = false;
         [self.view addSubview:_container];
     }
     return _container;
@@ -110,7 +111,6 @@
         editBtn.layer.borderWidth = 0.5f;
         editBtn.layer.borderColor = [UIColor whiteColor].CGColor;
         [_userView addSubview:editBtn];
-        
     }
     return _userView;
 }
@@ -173,12 +173,10 @@
         _musicVC.view.frame   = CGRectMake(0, 0, kScreenWidth, itemViewH);
         _finderVC.view.frame  = CGRectMake(kScreenWidth, 0, kScreenWidth, itemViewH);
         _aboutMeVC.view.frame = CGRectMake(kScreenWidth*2, 0, kScreenWidth, itemViewH);
-        
-        
+
         [_horizontalBox addSubview:_musicVC.view];
         [_horizontalBox addSubview:_finderVC.view];
         [_horizontalBox addSubview:_aboutMeVC.view];
-        
         
     }
     return _horizontalBox;
@@ -310,6 +308,7 @@
     
     return attr;
 }
+
 #pragma mark - scrollview delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
@@ -338,7 +337,7 @@
             _container.bounces = true;
             
         }
-        
+      
     }
     
     /***==================== 水平滑动 ================***/

@@ -10,6 +10,8 @@
 
 @interface MNMusicViewController : SDKBaseViewController
 
+@property (nonatomic, strong) UITableView *mainTableView;
+
 @property (nonatomic, strong) NSArray *listArray;
 
 @end

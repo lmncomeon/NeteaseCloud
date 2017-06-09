@@ -21,8 +21,6 @@ static NSString *const UITableViewCellID = @"UITableViewCell";
 
 @implementation ViewController
 
-
-
 - (UITableView *)maintTableview {
     if (!_maintTableview) {
         _maintTableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStyleGrouped];
