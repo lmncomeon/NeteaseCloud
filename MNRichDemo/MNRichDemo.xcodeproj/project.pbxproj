@@ -121,6 +121,9 @@
 		BE68441F1EE644E60010D98B /* MNViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BE68441E1EE644E60010D98B /* MNViewController1.m */; };
 		BE8F85851EE53938003E0E92 /* MNTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85841EE53938003E0E92 /* MNTipView.m */; };
 		BE8F85881EE566E6003E0E92 /* MNUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85871EE566E6003E0E92 /* MNUserCell.m */; };
+		BEA279341EEA502B0035B6F5 /* MNCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */; };
+		BEA2793A1EEA516A0035B6F5 /* MNItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA279391EEA516A0035B6F5 /* MNItemCell.m */; };
+		BEA2793D1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */; };
 		BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */; };
 		BEABCCA11EE6AB2A00E8142A /* MNFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA01EE6AB2A00E8142A /* MNFinderViewController.m */; };
 		BEABCCA41EE6AB3300E8142A /* MNAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA31EE6AB3300E8142A /* MNAboutMeViewController.m */; };
@@ -346,6 +349,12 @@
 		BE8F85841EE53938003E0E92 /* MNTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTipView.m; sourceTree = "<group>"; };
 		BE8F85861EE566E6003E0E92 /* MNUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUserCell.h; sourceTree = "<group>"; };
 		BE8F85871EE566E6003E0E92 /* MNUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNUserCell.m; sourceTree = "<group>"; };
+		BEA279321EEA502B0035B6F5 /* MNCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionViewController.h; sourceTree = "<group>"; };
+		BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionViewController.m; sourceTree = "<group>"; };
+		BEA279381EEA516A0035B6F5 /* MNItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNItemCell.h; sourceTree = "<group>"; };
+		BEA279391EEA516A0035B6F5 /* MNItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNItemCell.m; sourceTree = "<group>"; };
+		BEA2793B1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionReusableHeaderView.h; sourceTree = "<group>"; };
+		BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionReusableHeaderView.m; sourceTree = "<group>"; };
 		BEABCC9C1EE6AB1E00E8142A /* MNMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNMusicViewController.h; sourceTree = "<group>"; };
 		BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNMusicViewController.m; sourceTree = "<group>"; };
 		BEABCC9F1EE6AB2A00E8142A /* MNFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNFinderViewController.h; sourceTree = "<group>"; };
@@ -454,6 +463,12 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
+				BEA279321EEA502B0035B6F5 /* MNCollectionViewController.h */,
+				BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */,
+				BEA2793B1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.h */,
+				BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */,
+				BEA279381EEA516A0035B6F5 /* MNItemCell.h */,
+				BEA279391EEA516A0035B6F5 /* MNItemCell.m */,
 				BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */,
 			);
 			path = Controllers;
@@ -957,6 +972,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA2793A1EEA516A0035B6F5 /* MNItemCell.m in Sources */,
 				BE361CB21EE4FA8B005C8F36 /* SDWebImageDecoder.m in Sources */,
 				BE361CB51EE4FA8B005C8F36 /* SDWebImageManager.m in Sources */,
 				BE361C981EE4FA8B005C8F36 /* NSObject+MJKeyValue.m in Sources */,
@@ -1025,6 +1041,7 @@
 				BE361C941EE4FA8B005C8F36 /* MJPropertyKey.m in Sources */,
 				BE361D0E1EE4FF81005C8F36 /* SDkCustomRoundedButton.m in Sources */,
 				BE361CF61EE4FDC8005C8F36 /* SDKCommonService.m in Sources */,
+				BEA2793D1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m in Sources */,
 				BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */,
 				BE361CBC1EE4FA8B005C8F36 /* UIImageView+WebCache.m in Sources */,
 				BE361C8F1EE4FA8B005C8F36 /* MBProgressHUD.m in Sources */,
@@ -1033,6 +1050,7 @@
 				BE361D331EE50203005C8F36 /* AFNetworkReachabilityManager.m in Sources */,
 				BE361C991EE4FA8B005C8F36 /* NSObject+MJProperty.m in Sources */,
 				BE361CB61EE4FA8B005C8F36 /* SDWebImagePrefetcher.m in Sources */,
+				BEA279341EEA502B0035B6F5 /* MNCollectionViewController.m in Sources */,
 				BE361D381EE50203005C8F36 /* AFURLSessionManager.m in Sources */,
 				BE68441F1EE644E60010D98B /* MNViewController1.m in Sources */,
 				BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */,

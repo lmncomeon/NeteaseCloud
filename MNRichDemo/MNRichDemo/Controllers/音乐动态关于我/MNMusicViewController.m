@@ -22,6 +22,7 @@ static NSString *const cellID = @"UITableViewCellID";
         _mainTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _mainTableView.dataSource = self;
         _mainTableView.delegate   = self;
+        _mainTableView.scrollEnabled = false;
         _mainTableView.rowHeight  = adaptY(60);
         [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
         [self.view addSubview:_mainTableView];
@@ -32,13 +33,15 @@ static NSString *const cellID = @"UITableViewCellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mainTableView.height = kScreenHeight-adaptY(30)-64;
+    [self mainTableView];
 }
 
 - (void)setListArray:(NSArray *)listArray {
     _listArray = listArray;
     
-    [self.mainTableView reloadData];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.mainTableView reloadData];
+    });
 }
 
 #pragma mark - tableview datasource
@@ -82,6 +85,13 @@ static NSString *const cellID = @"UITableViewCellID";
     [header addSubview:lab];
     
     return header;
+}
+
+#pragma mark - scrollview delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+    DLog(@"======%.2f", offsetY);
 }
 
 #pragma mark - dealloc

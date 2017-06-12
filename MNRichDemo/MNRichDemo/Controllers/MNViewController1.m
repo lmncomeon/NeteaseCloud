@@ -337,7 +337,11 @@
             _container.bounces = true;
             
         }
-      
+     
+        if (offsetY >= self.userView.height) {
+            _musicVC.mainTableView.scrollEnabled = true;
+            
+        }
     }
     
     /***==================== 水平滑动 ================***/
