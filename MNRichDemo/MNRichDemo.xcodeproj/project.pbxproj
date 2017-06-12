@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE03C78D1EEE31AE003AEBBF /* MNCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C7881EEE31AE003AEBBF /* MNCollectionReusableHeaderView.m */; };
+		BE03C78E1EEE31AE003AEBBF /* MNCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C78A1EEE31AE003AEBBF /* MNCollectionViewController.m */; };
+		BE03C78F1EEE31AE003AEBBF /* MNItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C78C1EEE31AE003AEBBF /* MNItemCell.m */; };
+		BE03C7931EEE78E8003AEBBF /* MNCutomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C7921EEE78E8003AEBBF /* MNCutomCollectionView.m */; };
 		BE361BF81EE4F7FE005C8F36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BF61EE4F7FE005C8F36 /* ViewController.m */; };
 		BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BFB1EE4F809005C8F36 /* AppDelegate.m */; };
 		BE361C831EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361C051EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m */; };
@@ -121,9 +125,6 @@
 		BE68441F1EE644E60010D98B /* MNViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BE68441E1EE644E60010D98B /* MNViewController1.m */; };
 		BE8F85851EE53938003E0E92 /* MNTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85841EE53938003E0E92 /* MNTipView.m */; };
 		BE8F85881EE566E6003E0E92 /* MNUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85871EE566E6003E0E92 /* MNUserCell.m */; };
-		BEA279341EEA502B0035B6F5 /* MNCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */; };
-		BEA2793A1EEA516A0035B6F5 /* MNItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA279391EEA516A0035B6F5 /* MNItemCell.m */; };
-		BEA2793D1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */; };
 		BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */; };
 		BEABCCA11EE6AB2A00E8142A /* MNFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA01EE6AB2A00E8142A /* MNFinderViewController.m */; };
 		BEABCCA41EE6AB3300E8142A /* MNAboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCCA31EE6AB3300E8142A /* MNAboutMeViewController.m */; };
@@ -135,6 +136,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE03C7871EEE31AE003AEBBF /* MNCollectionReusableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionReusableHeaderView.h; sourceTree = "<group>"; };
+		BE03C7881EEE31AE003AEBBF /* MNCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionReusableHeaderView.m; sourceTree = "<group>"; };
+		BE03C7891EEE31AE003AEBBF /* MNCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionViewController.h; sourceTree = "<group>"; };
+		BE03C78A1EEE31AE003AEBBF /* MNCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionViewController.m; sourceTree = "<group>"; };
+		BE03C78B1EEE31AE003AEBBF /* MNItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNItemCell.h; sourceTree = "<group>"; };
+		BE03C78C1EEE31AE003AEBBF /* MNItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNItemCell.m; sourceTree = "<group>"; };
+		BE03C7901EEE475A003AEBBF /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		BE03C7911EEE78E8003AEBBF /* MNCutomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCutomCollectionView.h; sourceTree = "<group>"; };
+		BE03C7921EEE78E8003AEBBF /* MNCutomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCutomCollectionView.m; sourceTree = "<group>"; };
 		BE361BF51EE4F7FE005C8F36 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE361BF61EE4F7FE005C8F36 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE361BFA1EE4F809005C8F36 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -349,12 +359,6 @@
 		BE8F85841EE53938003E0E92 /* MNTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTipView.m; sourceTree = "<group>"; };
 		BE8F85861EE566E6003E0E92 /* MNUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUserCell.h; sourceTree = "<group>"; };
 		BE8F85871EE566E6003E0E92 /* MNUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNUserCell.m; sourceTree = "<group>"; };
-		BEA279321EEA502B0035B6F5 /* MNCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionViewController.h; sourceTree = "<group>"; };
-		BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionViewController.m; sourceTree = "<group>"; };
-		BEA279381EEA516A0035B6F5 /* MNItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNItemCell.h; sourceTree = "<group>"; };
-		BEA279391EEA516A0035B6F5 /* MNItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNItemCell.m; sourceTree = "<group>"; };
-		BEA2793B1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCollectionReusableHeaderView.h; sourceTree = "<group>"; };
-		BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCollectionReusableHeaderView.m; sourceTree = "<group>"; };
 		BEABCC9C1EE6AB1E00E8142A /* MNMusicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNMusicViewController.h; sourceTree = "<group>"; };
 		BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNMusicViewController.m; sourceTree = "<group>"; };
 		BEABCC9F1EE6AB2A00E8142A /* MNFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNFinderViewController.h; sourceTree = "<group>"; };
@@ -392,6 +396,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE03C7861EEE31AE003AEBBF /* collection写着玩 */ = {
+			isa = PBXGroup;
+			children = (
+				BE03C7891EEE31AE003AEBBF /* MNCollectionViewController.h */,
+				BE03C78A1EEE31AE003AEBBF /* MNCollectionViewController.m */,
+				BE03C7911EEE78E8003AEBBF /* MNCutomCollectionView.h */,
+				BE03C7921EEE78E8003AEBBF /* MNCutomCollectionView.m */,
+				BE03C7871EEE31AE003AEBBF /* MNCollectionReusableHeaderView.h */,
+				BE03C7881EEE31AE003AEBBF /* MNCollectionReusableHeaderView.m */,
+				BE03C78B1EEE31AE003AEBBF /* MNItemCell.h */,
+				BE03C78C1EEE31AE003AEBBF /* MNItemCell.m */,
+			);
+			path = "collection写着玩";
+			sourceTree = "<group>";
+		};
 		BE361BEF1EE4F7FE005C8F36 /* PublicTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +458,7 @@
 				BE361D641EE50B9B005C8F36 /* SDKBaseViewController.m */,
 				BE361CF91EE4FE6B005C8F36 /* SDKProjectHeader.h */,
 				BE361CFA1EE4FE6B005C8F36 /* SDKProjectHeader.m */,
+				BE03C7901EEE475A003AEBBF /* Header.h */,
 				BE361D021EE4FF01005C8F36 /* SDKNavigationController.h */,
 				BE361D031EE4FF01005C8F36 /* SDKNavigationController.m */,
 			);
@@ -463,12 +483,7 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
-				BEA279321EEA502B0035B6F5 /* MNCollectionViewController.h */,
-				BEA279331EEA502B0035B6F5 /* MNCollectionViewController.m */,
-				BEA2793B1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.h */,
-				BEA2793C1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m */,
-				BEA279381EEA516A0035B6F5 /* MNItemCell.h */,
-				BEA279391EEA516A0035B6F5 /* MNItemCell.m */,
+				BE03C7861EEE31AE003AEBBF /* collection写着玩 */,
 				BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */,
 			);
 			path = Controllers;
@@ -972,7 +987,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA2793A1EEA516A0035B6F5 /* MNItemCell.m in Sources */,
+				BE03C78E1EEE31AE003AEBBF /* MNCollectionViewController.m in Sources */,
 				BE361CB21EE4FA8B005C8F36 /* SDWebImageDecoder.m in Sources */,
 				BE361CB51EE4FA8B005C8F36 /* SDWebImageManager.m in Sources */,
 				BE361C981EE4FA8B005C8F36 /* NSObject+MJKeyValue.m in Sources */,
@@ -1028,9 +1043,11 @@
 				BE361CF71EE4FDC8005C8F36 /* SDKnetwork.m in Sources */,
 				BE361D4B1EE50211005C8F36 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				BE361CAB1EE4FA8B005C8F36 /* UIScrollView+MJExtension.m in Sources */,
+				BE03C78F1EEE31AE003AEBBF /* MNItemCell.m in Sources */,
 				BE361CFE1EE4FEBE005C8F36 /* SDKAboutText.m in Sources */,
 				BE361D311EE50203005C8F36 /* AFHTTPRequestOperationManager.m in Sources */,
 				BE361CA61EE4FA8B005C8F36 /* MJRefreshGifHeader.m in Sources */,
+				BE03C7931EEE78E8003AEBBF /* MNCutomCollectionView.m in Sources */,
 				BE361C9D1EE4FA8B005C8F36 /* MJRefreshComponent.m in Sources */,
 				BED8574A1EE4F5B300F1F20F /* main.m in Sources */,
 				BE361D571EE50370005C8F36 /* SDKAuthJudge.m in Sources */,
@@ -1041,7 +1058,6 @@
 				BE361C941EE4FA8B005C8F36 /* MJPropertyKey.m in Sources */,
 				BE361D0E1EE4FF81005C8F36 /* SDkCustomRoundedButton.m in Sources */,
 				BE361CF61EE4FDC8005C8F36 /* SDKCommonService.m in Sources */,
-				BEA2793D1EEA7A840035B6F5 /* MNCollectionReusableHeaderView.m in Sources */,
 				BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */,
 				BE361CBC1EE4FA8B005C8F36 /* UIImageView+WebCache.m in Sources */,
 				BE361C8F1EE4FA8B005C8F36 /* MBProgressHUD.m in Sources */,
@@ -1050,7 +1066,6 @@
 				BE361D331EE50203005C8F36 /* AFNetworkReachabilityManager.m in Sources */,
 				BE361C991EE4FA8B005C8F36 /* NSObject+MJProperty.m in Sources */,
 				BE361CB61EE4FA8B005C8F36 /* SDWebImagePrefetcher.m in Sources */,
-				BEA279341EEA502B0035B6F5 /* MNCollectionViewController.m in Sources */,
 				BE361D381EE50203005C8F36 /* AFURLSessionManager.m in Sources */,
 				BE68441F1EE644E60010D98B /* MNViewController1.m in Sources */,
 				BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */,
@@ -1062,6 +1077,7 @@
 				BE361CAF1EE4FA8B005C8F36 /* NSData+ImageContentType.m in Sources */,
 				BE361CAD1EE4FA8B005C8F36 /* UIView+MJExtension.m in Sources */,
 				BE361D301EE50203005C8F36 /* AFHTTPRequestOperation.m in Sources */,
+				BE03C78D1EEE31AE003AEBBF /* MNCollectionReusableHeaderView.m in Sources */,
 				BE361CA71EE4FA8B005C8F36 /* MJRefreshNormalHeader.m in Sources */,
 				BE361C931EE4FA8B005C8F36 /* MJProperty.m in Sources */,
 				BE361D4C1EE50211005C8F36 /* UIAlertView+AFNetworking.m in Sources */,

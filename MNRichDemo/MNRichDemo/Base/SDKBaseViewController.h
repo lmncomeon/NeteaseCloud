@@ -10,6 +10,7 @@
 #import "SDKProjectHeader.h"
 #import "SDKCommonService.h"
 #import "NSArray+Log.h"
+#import "Header.h"
 
 #import "SDKnetwork.h"
 #import "SDKNetworkState.h"

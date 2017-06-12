@@ -10,6 +10,8 @@
 
 @interface MNMusicViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, assign) BOOL canScroll;
+
 @end
 
 static NSString *const cellID = @"UITableViewCellID";
@@ -22,7 +24,6 @@ static NSString *const cellID = @"UITableViewCellID";
         _mainTableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _mainTableView.dataSource = self;
         _mainTableView.delegate   = self;
-        _mainTableView.scrollEnabled = false;
         _mainTableView.rowHeight  = adaptY(60);
         [_mainTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellID];
         [self.view addSubview:_mainTableView];
@@ -34,6 +35,8 @@ static NSString *const cellID = @"UITableViewCellID";
     [super viewDidLoad];
     
     [self mainTableView];
+    
+    
 }
 
 - (void)setListArray:(NSArray *)listArray {
@@ -89,14 +92,12 @@ static NSString *const cellID = @"UITableViewCellID";
 
 #pragma mark - scrollview delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetY = scrollView.contentOffset.y;
     
-    DLog(@"======%.2f", offsetY);
 }
 
 #pragma mark - dealloc
-- (void)dealloc {
-
+-(void)dealloc{
+    
 }
 
 @end
