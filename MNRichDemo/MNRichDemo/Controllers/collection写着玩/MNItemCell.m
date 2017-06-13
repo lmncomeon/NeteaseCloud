@@ -11,6 +11,7 @@
 #import "UIView+CustomView.h"
 #import "SDKCustomLabel.h"
 #import "SDKAboutText.h"
+#import "MNCutomCollectionView.h"
 
 // VC
 #import "MNMusicViewController.h"
@@ -131,6 +132,9 @@
     // 切换界面
     [self changeShowView:sender];
     
+    // 发送通知
+    [self postNotificationWithPage:sender.tag-1000];
+    
     if (sender.tag - 1000 == 0) {
         int index = arc4random_uniform(2);
         if (index == 0) {
@@ -164,6 +168,9 @@
     [_horizontalBox setContentOffset:CGPointMake(kScreenWidth*(sender.tag-1000), 0) animated:false];
 }
 
+- (void)postNotificationWithPage:(NSInteger)page {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"horizontalAction" object:nil userInfo:@{@"page" : @(page)}];
+}
 
 #pragma mark - scrollview delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -180,8 +187,21 @@
         
         // 滑动线设置
         [self changeMovieLine:self.switchBtnsArray[page]];
+        
     }
     
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    /***==================== 水平滑动 ================***/
+    if (scrollView == _horizontalBox) {
+        // other handle
+        NSInteger page = (scrollView.contentOffset.x+kScreenWidth*0.5) / kScreenWidth;
+        
+        [self postNotificationWithPage:page];
+
+    }
 }
 
 #pragma mark - other method

@@ -36,7 +36,12 @@ static NSString *const cellID = @"UITableViewCellID";
     
     [self mainTableView];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modifyProperty) name:@"canScroll" object:nil];
     
+}
+
+- (void)modifyProperty {
+    _canScroll = true;
 }
 
 - (void)setListArray:(NSArray *)listArray {
@@ -92,12 +97,24 @@ static NSString *const cellID = @"UITableViewCellID";
 
 #pragma mark - scrollview delegate
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // ---- 调整嵌套问题 -----
+    if (!_canScroll) {
+        scrollView.contentOffset = CGPointZero;
+    }
     
+    if (scrollView.contentOffset.y <= 0) {
+        _canScroll = false;
+        scrollView.contentOffset = CGPointZero;
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"superCanScroll" object:nil];
+    } else {
+        _canScroll = true;
+    }
 }
 
 #pragma mark - dealloc
 -(void)dealloc{
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

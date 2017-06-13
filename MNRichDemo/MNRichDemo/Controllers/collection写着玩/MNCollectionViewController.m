@@ -20,12 +20,9 @@
 
 @property (nonatomic, strong) MNCutomCollectionView *mainColletionView;
 
-
-@property (nonatomic, assign) BOOL isTopIsCanNotMoveTabView;
-
-@property (nonatomic, assign) BOOL isTopIsCanNotMoveTabViewPre;
-
+@property (nonatomic, assign) NSInteger currentPage;
 @property (nonatomic, assign) BOOL canScroll;
+@property (nonatomic, assign) BOOL primarycanScroll;
 
 @end
 
@@ -95,7 +92,16 @@ static NSString *const headerID_collection = @"MNCollectionReusableHeaderViewID"
 
     [self bgView];
     [self mainColletionView];
- 
+    
+    _primarycanScroll = _canScroll = true;
+    _currentPage = 0;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modifyProperty:) name:@"superCanScroll" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modifyProperty:) name:@"horizontalAction" object:nil];
+    
+
+
 }
 
 
@@ -111,6 +117,32 @@ static NSString *const headerID_collection = @"MNCollectionReusableHeaderViewID"
     self.navigationController.navigationBarHidden = false;
 }
 
+- (void)modifyProperty:(NSNotification *)note {
+    NSString *noteName = note.name;
+    if ([noteName isEqualToString:@"superCanScroll"])
+    {
+        _primarycanScroll = _canScroll = true;
+    }
+    if ([noteName isEqualToString:@"horizontalAction"])
+    {
+        
+        _currentPage = [note.userInfo[@"page"] integerValue];
+        
+        
+        if (_currentPage == 0) {
+        
+            if (_primarycanScroll) {
+                _canScroll = true;
+            } else {
+                _canScroll = false;
+            }
+        } else {
+            _canScroll = true;
+        }
+    }
+    
+}
+
 #pragma mark - collectionView delegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -122,7 +154,6 @@ static NSString *const headerID_collection = @"MNCollectionReusableHeaderViewID"
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MNItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID_collection forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -166,8 +197,21 @@ static NSString *const headerID_collection = @"MNCollectionReusableHeaderViewID"
             _mainColletionView.bounces = true;
         }
         
+        // ----- 调整嵌套问题 ----
+        if (!_canScroll) {
+            _mainColletionView.contentOffset = CGPointMake(0, adaptY(134));
+        }
+        
+        if (_currentPage == 0) {
+            if (offsetY >= adaptY(134)) {
+                _primarycanScroll = _canScroll = false;
+                _mainColletionView.contentOffset = CGPointMake(0, adaptY(134));
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"canScroll" object:nil];
+            }
+        }
+        
     }
-
+    
 }
 
 #pragma mark - 返回
@@ -177,7 +221,7 @@ static NSString *const headerID_collection = @"MNCollectionReusableHeaderViewID"
 
 #pragma mark - dealloc
 - (void)dealloc {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

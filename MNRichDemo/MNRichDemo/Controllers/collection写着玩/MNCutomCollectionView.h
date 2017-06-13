@@ -11,3 +11,8 @@
 @interface MNCutomCollectionView : UICollectionView <UIGestureRecognizerDelegate>
 
 @end
+
+
+
+
+
