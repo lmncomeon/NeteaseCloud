@@ -14,6 +14,9 @@
 		BE07C5B61EEFBBDC00626101 /* MNPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5B51EEFBBDC00626101 /* MNPhotosViewController.m */; };
 		BE07C5B91EEFC01000626101 /* XWScanImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5B81EEFC01000626101 /* XWScanImage.m */; };
 		BE07C5BF1EEFD4DE00626101 /* MNPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5BE1EEFD4DE00626101 /* MNPhotosView.m */; };
+		BE3119891EF10E2800ADE400 /* LMApp.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3119861EF10E2800ADE400 /* LMApp.m */; };
+		BE31198A1EF10E2800ADE400 /* LMAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3119871EF10E2800ADE400 /* LMAppController.m */; };
+		BE31198D1EF10F2600ADE400 /* MNAppListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE31198C1EF10F2600ADE400 /* MNAppListViewController.m */; };
 		BE361BF81EE4F7FE005C8F36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BF61EE4F7FE005C8F36 /* ViewController.m */; };
 		BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BFB1EE4F809005C8F36 /* AppDelegate.m */; };
 		BE361C831EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361C051EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m */; };
@@ -154,6 +157,12 @@
 		BE07C5B81EEFC01000626101 /* XWScanImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWScanImage.m; sourceTree = "<group>"; };
 		BE07C5BD1EEFD4DE00626101 /* MNPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNPhotosView.h; sourceTree = "<group>"; };
 		BE07C5BE1EEFD4DE00626101 /* MNPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNPhotosView.m; sourceTree = "<group>"; };
+		BE3119851EF10E2800ADE400 /* LMApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMApp.h; path = ../../../../../../../Downloads/LMApp.h; sourceTree = "<group>"; };
+		BE3119861EF10E2800ADE400 /* LMApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMApp.m; path = ../../../../../../../Downloads/LMApp.m; sourceTree = "<group>"; };
+		BE3119871EF10E2800ADE400 /* LMAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LMAppController.m; path = ../../../../../../../Downloads/LMAppController.m; sourceTree = "<group>"; };
+		BE3119881EF10E2800ADE400 /* LMAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LMAppController.h; path = ../../../../../../../Downloads/LMAppController.h; sourceTree = "<group>"; };
+		BE31198B1EF10F2600ADE400 /* MNAppListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAppListViewController.h; sourceTree = "<group>"; };
+		BE31198C1EF10F2600ADE400 /* MNAppListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAppListViewController.m; sourceTree = "<group>"; };
 		BE361BF51EE4F7FE005C8F36 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE361BF61EE4F7FE005C8F36 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE361BFA1EE4F809005C8F36 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -433,6 +442,27 @@
 			path = "图片预览";
 			sourceTree = "<group>";
 		};
+		BE3119831EF10DD400ADE400 /* 获取所有app */ = {
+			isa = PBXGroup;
+			children = (
+				BE31198B1EF10F2600ADE400 /* MNAppListViewController.h */,
+				BE31198C1EF10F2600ADE400 /* MNAppListViewController.m */,
+				BE3119841EF10E1700ADE400 /* 三方 */,
+			);
+			path = "获取所有app";
+			sourceTree = "<group>";
+		};
+		BE3119841EF10E1700ADE400 /* 三方 */ = {
+			isa = PBXGroup;
+			children = (
+				BE3119851EF10E2800ADE400 /* LMApp.h */,
+				BE3119861EF10E2800ADE400 /* LMApp.m */,
+				BE3119881EF10E2800ADE400 /* LMAppController.h */,
+				BE3119871EF10E2800ADE400 /* LMAppController.m */,
+			);
+			path = "三方";
+			sourceTree = "<group>";
+		};
 		BE361BEF1EE4F7FE005C8F36 /* PublicTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +535,7 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
+				BE3119831EF10DD400ADE400 /* 获取所有app */,
 				BE07C5B31EEFBBBF00626101 /* 图片预览 */,
 				BE03C7861EEE31AE003AEBBF /* collection写着玩 */,
 				BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */,
@@ -1020,6 +1051,7 @@
 				BE361D681EE50E29005C8F36 /* MNViewController0.m in Sources */,
 				BE361D511EE50211005C8F36 /* UIWebView+AFNetworking.m in Sources */,
 				BE361D621EE503CE005C8F36 /* GTMBase64.m in Sources */,
+				BE31198A1EF10E2800ADE400 /* LMAppController.m in Sources */,
 				BE361CA41EE4FA8B005C8F36 /* MJRefreshBackNormalFooter.m in Sources */,
 				BE361D501EE50211005C8F36 /* UIRefreshControl+AFNetworking.m in Sources */,
 				BE361C9E1EE4FA8B005C8F36 /* MJRefreshFooter.m in Sources */,
@@ -1036,6 +1068,7 @@
 				BE361CAA1EE4FA8B005C8F36 /* MJRefreshConst.m in Sources */,
 				BE361CB01EE4FA8B005C8F36 /* SDImageCache.m in Sources */,
 				BE361C831EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m in Sources */,
+				BE31198D1EF10F2600ADE400 /* MNAppListViewController.m in Sources */,
 				BE361C921EE4FA8B005C8F36 /* MJFoundation.m in Sources */,
 				BE361CA01EE4FA8B005C8F36 /* MJRefreshAutoGifFooter.m in Sources */,
 				BE361CB91EE4FA8B005C8F36 /* UIImage+MultiFormat.m in Sources */,
@@ -1114,6 +1147,7 @@
 				BE361D611EE503CE005C8F36 /* DES.m in Sources */,
 				BE361CB31EE4FA8B005C8F36 /* SDWebImageDownloader.m in Sources */,
 				BE361CBF1EE4FA8B005C8F36 /* YYClassInfo.m in Sources */,
+				BE3119891EF10E2800ADE400 /* LMApp.m in Sources */,
 				BE361C971EE4FA8B005C8F36 /* NSObject+MJCoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
