@@ -11,6 +11,9 @@
 		BE03C78E1EEE31AE003AEBBF /* MNCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C78A1EEE31AE003AEBBF /* MNCollectionViewController.m */; };
 		BE03C78F1EEE31AE003AEBBF /* MNItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C78C1EEE31AE003AEBBF /* MNItemCell.m */; };
 		BE03C7931EEE78E8003AEBBF /* MNCutomCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE03C7921EEE78E8003AEBBF /* MNCutomCollectionView.m */; };
+		BE07C5B61EEFBBDC00626101 /* MNPhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5B51EEFBBDC00626101 /* MNPhotosViewController.m */; };
+		BE07C5B91EEFC01000626101 /* XWScanImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5B81EEFC01000626101 /* XWScanImage.m */; };
+		BE07C5BF1EEFD4DE00626101 /* MNPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE07C5BE1EEFD4DE00626101 /* MNPhotosView.m */; };
 		BE361BF81EE4F7FE005C8F36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BF61EE4F7FE005C8F36 /* ViewController.m */; };
 		BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361BFB1EE4F809005C8F36 /* AppDelegate.m */; };
 		BE361C831EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361C051EE4FA8B005C8F36 /* UIViewController+KeyboardCorver.m */; };
@@ -145,6 +148,12 @@
 		BE03C7901EEE475A003AEBBF /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		BE03C7911EEE78E8003AEBBF /* MNCutomCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNCutomCollectionView.h; sourceTree = "<group>"; };
 		BE03C7921EEE78E8003AEBBF /* MNCutomCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNCutomCollectionView.m; sourceTree = "<group>"; };
+		BE07C5B41EEFBBDC00626101 /* MNPhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNPhotosViewController.h; sourceTree = "<group>"; };
+		BE07C5B51EEFBBDC00626101 /* MNPhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNPhotosViewController.m; sourceTree = "<group>"; };
+		BE07C5B71EEFC01000626101 /* XWScanImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWScanImage.h; sourceTree = "<group>"; };
+		BE07C5B81EEFC01000626101 /* XWScanImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWScanImage.m; sourceTree = "<group>"; };
+		BE07C5BD1EEFD4DE00626101 /* MNPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNPhotosView.h; sourceTree = "<group>"; };
+		BE07C5BE1EEFD4DE00626101 /* MNPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNPhotosView.m; sourceTree = "<group>"; };
 		BE361BF51EE4F7FE005C8F36 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BE361BF61EE4F7FE005C8F36 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BE361BFA1EE4F809005C8F36 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -411,6 +420,19 @@
 			path = "collection写着玩";
 			sourceTree = "<group>";
 		};
+		BE07C5B31EEFBBBF00626101 /* 图片预览 */ = {
+			isa = PBXGroup;
+			children = (
+				BE07C5B41EEFBBDC00626101 /* MNPhotosViewController.h */,
+				BE07C5B51EEFBBDC00626101 /* MNPhotosViewController.m */,
+				BE07C5B71EEFC01000626101 /* XWScanImage.h */,
+				BE07C5B81EEFC01000626101 /* XWScanImage.m */,
+				BE07C5BD1EEFD4DE00626101 /* MNPhotosView.h */,
+				BE07C5BE1EEFD4DE00626101 /* MNPhotosView.m */,
+			);
+			path = "图片预览";
+			sourceTree = "<group>";
+		};
 		BE361BEF1EE4F7FE005C8F36 /* PublicTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +505,7 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
+				BE07C5B31EEFBBBF00626101 /* 图片预览 */,
 				BE03C7861EEE31AE003AEBBF /* collection写着玩 */,
 				BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */,
 			);
@@ -1002,6 +1025,7 @@
 				BE361C9E1EE4FA8B005C8F36 /* MJRefreshFooter.m in Sources */,
 				BE361C951EE4FA8B005C8F36 /* MJPropertyType.m in Sources */,
 				BE8F85851EE53938003E0E92 /* MNTipView.m in Sources */,
+				BE07C5B61EEFBBDC00626101 /* MNPhotosViewController.m in Sources */,
 				BE361D341EE50203005C8F36 /* AFSecurityPolicy.m in Sources */,
 				BE361CA51EE4FA8B005C8F36 /* MJRefreshBackStateFooter.m in Sources */,
 				BE361CAE1EE4FA8B005C8F36 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1033,6 +1057,7 @@
 				BE361CCB1EE4FB42005C8F36 /* UIView+CustomView.m in Sources */,
 				BE361D4A1EE50211005C8F36 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				BE361CA31EE4FA8B005C8F36 /* MJRefreshBackGifFooter.m in Sources */,
+				BE07C5B91EEFC01000626101 /* XWScanImage.m in Sources */,
 				BE361D101EE4FF81005C8F36 /* SDKJWTextField.m in Sources */,
 				BE361CAC1EE4FA8B005C8F36 /* UIScrollView+MJRefresh.m in Sources */,
 				BE361CF81EE4FDC8005C8F36 /* SDKNetworkState.m in Sources */,
@@ -1061,6 +1086,7 @@
 				BE361BFC1EE4F809005C8F36 /* AppDelegate.m in Sources */,
 				BE361CBC1EE4FA8B005C8F36 /* UIImageView+WebCache.m in Sources */,
 				BE361C8F1EE4FA8B005C8F36 /* MBProgressHUD.m in Sources */,
+				BE07C5BF1EEFD4DE00626101 /* MNPhotosView.m in Sources */,
 				BEB33BBF1EE9201800CBBF54 /* MNControllerModel.m in Sources */,
 				BE361CBD1EE4FA8B005C8F36 /* UIView+WebCacheOperation.m in Sources */,
 				BE361D331EE50203005C8F36 /* AFNetworkReachabilityManager.m in Sources */,

@@ -23,6 +23,7 @@
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNViewController0" text:@"网易云写着玩"]];
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNViewController1" text:@"网易云复杂页面"]];
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNCollectionViewController" text:@"collection写着玩"]];
+    [tmp addObject:[MNControllerModel modelWithClassName:@"MNPhotosViewController" text:@"图片预览"]];
     
     return tmp.copy;
 }
