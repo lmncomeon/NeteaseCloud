@@ -25,6 +25,8 @@
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNCollectionViewController" text:@"collection写着玩"]];
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNPhotosViewController" text:@"图片预览"]];
     [tmp addObject:[MNControllerModel modelWithClassName:@"MNAppListViewController" text:@"获取所有app"]];
+    [tmp addObject:[MNControllerModel modelWithClassName:@"MNBallViewController" text:@"自由落体"]];
+    [tmp addObject:[MNControllerModel modelWithClassName:@"MNListViewController" text:@"水平滚动列表"]];
     
     
     return tmp.copy;

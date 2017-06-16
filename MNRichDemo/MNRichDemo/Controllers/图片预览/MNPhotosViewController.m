@@ -22,10 +22,9 @@
     
     NSMutableArray *namesArr = [NSMutableArray arrayWithCapacity:5];
     
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 9; i++) {
         [namesArr addObject:[NSString stringWithFormat:@"photo_%d", i%8]];
     }
-    
     
     _photos = [[MNPhotosView alloc] initWithFrame:CGRectMake(0, 100, kScreenWidth, 0) list:namesArr];
     [self.view addSubview:_photos];

@@ -6,7 +6,11 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "6.png",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "Image.png",
       "scale" : "2x"
     },
     {

@@ -128,7 +128,9 @@
 		BE361D621EE503CE005C8F36 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361D5E1EE503CE005C8F36 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BE361D651EE50B9B005C8F36 /* SDKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361D641EE50B9B005C8F36 /* SDKBaseViewController.m */; };
 		BE361D681EE50E29005C8F36 /* MNViewController0.m in Sources */ = {isa = PBXBuildFile; fileRef = BE361D671EE50E29005C8F36 /* MNViewController0.m */; };
+		BE4225D21EF3C25600A1428D /* MNListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4225D11EF3C25600A1428D /* MNListViewController.m */; };
 		BE68441F1EE644E60010D98B /* MNViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = BE68441E1EE644E60010D98B /* MNViewController1.m */; };
+		BE8E26011EF3893A00C1D1A5 /* MNBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8E26001EF3893A00C1D1A5 /* MNBallViewController.m */; };
 		BE8F85851EE53938003E0E92 /* MNTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85841EE53938003E0E92 /* MNTipView.m */; };
 		BE8F85881EE566E6003E0E92 /* MNUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8F85871EE566E6003E0E92 /* MNUserCell.m */; };
 		BEABCC9E1EE6AB1E00E8142A /* MNMusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEABCC9D1EE6AB1E00E8142A /* MNMusicViewController.m */; };
@@ -371,8 +373,12 @@
 		BE361D641EE50B9B005C8F36 /* SDKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDKBaseViewController.m; sourceTree = "<group>"; };
 		BE361D661EE50E29005C8F36 /* MNViewController0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNViewController0.h; sourceTree = "<group>"; };
 		BE361D671EE50E29005C8F36 /* MNViewController0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNViewController0.m; sourceTree = "<group>"; };
+		BE4225D01EF3C25600A1428D /* MNListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNListViewController.h; sourceTree = "<group>"; };
+		BE4225D11EF3C25600A1428D /* MNListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNListViewController.m; sourceTree = "<group>"; };
 		BE68441D1EE644E60010D98B /* MNViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNViewController1.h; sourceTree = "<group>"; };
 		BE68441E1EE644E60010D98B /* MNViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNViewController1.m; sourceTree = "<group>"; };
+		BE8E25FF1EF3893A00C1D1A5 /* MNBallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNBallViewController.h; sourceTree = "<group>"; };
+		BE8E26001EF3893A00C1D1A5 /* MNBallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNBallViewController.m; sourceTree = "<group>"; };
 		BE8F85831EE53938003E0E92 /* MNTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTipView.h; sourceTree = "<group>"; };
 		BE8F85841EE53938003E0E92 /* MNTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTipView.m; sourceTree = "<group>"; };
 		BE8F85861EE566E6003E0E92 /* MNUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUserCell.h; sourceTree = "<group>"; };
@@ -535,6 +541,8 @@
 				BE361D671EE50E29005C8F36 /* MNViewController0.m */,
 				BE68441D1EE644E60010D98B /* MNViewController1.h */,
 				BE68441E1EE644E60010D98B /* MNViewController1.m */,
+				BE4225CF1EF3C0BD00A1428D /* 可动的标签 */,
+				BE8E25FE1EF3887F00C1D1A5 /* 弹球效果 */,
 				BE3119831EF10DD400ADE400 /* 获取所有app */,
 				BE07C5B31EEFBBBF00626101 /* 图片预览 */,
 				BE03C7861EEE31AE003AEBBF /* collection写着玩 */,
@@ -897,6 +905,24 @@
 			path = "DES+Base64";
 			sourceTree = "<group>";
 		};
+		BE4225CF1EF3C0BD00A1428D /* 可动的标签 */ = {
+			isa = PBXGroup;
+			children = (
+				BE4225D01EF3C25600A1428D /* MNListViewController.h */,
+				BE4225D11EF3C25600A1428D /* MNListViewController.m */,
+			);
+			path = "可动的标签";
+			sourceTree = "<group>";
+		};
+		BE8E25FE1EF3887F00C1D1A5 /* 弹球效果 */ = {
+			isa = PBXGroup;
+			children = (
+				BE8E25FF1EF3893A00C1D1A5 /* MNBallViewController.h */,
+				BE8E26001EF3893A00C1D1A5 /* MNBallViewController.m */,
+			);
+			path = "弹球效果";
+			sourceTree = "<group>";
+		};
 		BEABCC9B1EE6AB1E00E8142A /* 音乐动态关于我 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1078,6 +1104,7 @@
 				BE361D0F1EE4FF81005C8F36 /* SDKJWAlertView.m in Sources */,
 				BE361D371EE50203005C8F36 /* AFURLResponseSerialization.m in Sources */,
 				BE361C841EE4FA8B005C8F36 /* customHUD.m in Sources */,
+				BE4225D21EF3C25600A1428D /* MNListViewController.m in Sources */,
 				BE361D4F1EE50211005C8F36 /* UIProgressView+AFNetworking.m in Sources */,
 				BE361CB81EE4FA8B005C8F36 /* UIImage+GIF.m in Sources */,
 				BE361D601EE503CE005C8F36 /* Base64.m in Sources */,
@@ -1104,6 +1131,7 @@
 				BE03C78F1EEE31AE003AEBBF /* MNItemCell.m in Sources */,
 				BE361CFE1EE4FEBE005C8F36 /* SDKAboutText.m in Sources */,
 				BE361D311EE50203005C8F36 /* AFHTTPRequestOperationManager.m in Sources */,
+				BE8E26011EF3893A00C1D1A5 /* MNBallViewController.m in Sources */,
 				BE361CA61EE4FA8B005C8F36 /* MJRefreshGifHeader.m in Sources */,
 				BE03C7931EEE78E8003AEBBF /* MNCutomCollectionView.m in Sources */,
 				BE361C9D1EE4FA8B005C8F36 /* MJRefreshComponent.m in Sources */,

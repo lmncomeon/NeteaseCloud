@@ -11,11 +11,13 @@
 #import "UIView+CustomView.h"
 
 @interface MNPhotosView () <UIScrollViewDelegate>
-
+{
+    UIImageView *_imageView;
+    UIScrollView *_scrollView;
+}
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) UIScrollView *mainView;
 @property (nonatomic, strong) UIPageControl *pageIndicator;
-
 
 @property (nonatomic, strong) NSMutableArray <UIImageView *> *imgviewsArr;
 @property (nonatomic, strong) NSMutableArray <UIImageView *> *previewArray;
@@ -27,6 +29,9 @@
 
 static NSInteger const num = 4;
 static NSString *const cellID_collection = @"UICollectionViewCellID";
+
+static CGFloat const maxZoomScale = 2.0f;
+static CGFloat const minZoomScale = 1.0f;
 
 @implementation MNPhotosView
 
@@ -53,6 +58,8 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
 - (instancetype)initWithFrame:(CGRect)frame list:(NSArray <NSString *> *)list {
     self = [super initWithFrame:frame];
     if (self) {
+        // default
+        
         CGFloat padding = adaptX(15);
         CGFloat itemWH  = (frame.size.width - (num+1)*padding) / num;
         
@@ -61,8 +68,12 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
             int col = i % num;
             
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(padding +col*(itemWH+padding), row*(itemWH+padding), itemWH, itemWH)];
+            imgView.layer.borderColor = [UIColor blackColor].CGColor;
+            imgView.layer.borderWidth = 0.5f;
             imgView.image = [UIImage imageNamed:list[i]];
             imgView.userInteractionEnabled = true;
+            imgView.contentMode = UIViewContentModeScaleAspectFill;
+            imgView.layer.masksToBounds = true;
             [imgView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
             imgView.tag = 1000 + i; // tag
             [self addSubview:imgView];
@@ -80,6 +91,7 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
 
 - (void)tap:(UITapGestureRecognizer *)sender {
     [self scanBigImageWithCurrentIndex:sender.view.tag-1000];
+    
 }
 
 - (void)scanBigImageWithCurrentIndex:(NSInteger)currentIndex {
@@ -96,25 +108,35 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
     
     // scrollview
     
-    CGFloat iconW = kScreenWidth-adaptX(20);
+    CGFloat iconW = kScreenWidth;
     CGFloat iconH = 0;
     
     
     [_backView addSubview:self.mainView];
     for (int i = 0; i < self.imgviewsArr.count; i++) {
-        UIView *item = [[UIView alloc] initWithFrame:CGRectMake(i*kScreenWidth, 0, kScreenWidth, kScreenHeight)];
+        UIScrollView *item = [[UIScrollView alloc] initWithFrame:CGRectMake(i*kScreenWidth, 0, kScreenWidth, kScreenHeight)];
+        item.bounces = false;
+        item.delegate = self;
         item.backgroundColor = krandomColorAlpha(0.8f);
-        [item addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideAction:)]];
         item.tag = 2000 + i; // tag;
+        [self addTapActions:item];
         [self.mainView addSubview:item];
+        
         
         UIImage *img = self.imgviewsArr[i].image;
         iconH = img.size.height/img.size.width *iconW;
         
         UIImageView *icon = [[UIImageView alloc] init];
+        icon.tag = 3000+i;
+        icon.userInteractionEnabled=YES;
         icon.image = img;
-        icon.frame = CGRectMake((kScreenWidth-iconW)*0.5, (kScreenHeight-iconH)*0.5, iconW, iconH);
         [item addSubview:icon];
+        if (iconH >= kScreenHeight) {
+            icon.frame = CGRectMake((kScreenWidth-iconW)*0.5, 0, iconW, iconH);
+            item.contentSize = CGSizeMake(0, iconH);
+        } else {
+            icon.frame = CGRectMake((kScreenWidth-iconW)*0.5, (kScreenHeight-iconH)*0.5, iconW, iconH);
+        }
         
         
         [self.previewArray addObject:icon];
@@ -140,9 +162,17 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
     }];
 }
 
+- (void)addTapActions:(UIView *)item {
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideAction:)];
+    [item addGestureRecognizer:singleTap];
+    
+}
+
 - (void)hideAction:(UITapGestureRecognizer *)sender {
     
     NSInteger currentIndex = sender.view.tag-2000;
+    
+    [(UIScrollView *)sender.view setContentOffset:CGPointZero];
     
     [UIView animateWithDuration:0.4f animations:^{
         
@@ -151,7 +181,7 @@ static NSString *const cellID_collection = @"UICollectionViewCellID";
     } completion:^(BOOL finished) {
         [_mainView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [_backView removeFromSuperview];
-
+        
     }];
     
 }
